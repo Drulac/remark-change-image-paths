@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Drulac/remark-change-image-paths/issues"
   },
-  "homepage": "https://github.com/Drulac/remark-change-image-paths#readme"
+  "homepage": "https://github.com/Drulac/remark-change-image-paths#readme",
+  "dependencies": {
+    "unist-util-visit": "^2.0.3"
+  }
 }

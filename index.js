@@ -2,7 +2,7 @@ const visit = require('unist-util-visit')
 
 module.exports = (
 	options = {
-		search: '^',
+		search: /^/,
 		replace: '/uploads',
 	}
 ) => {
@@ -14,8 +14,20 @@ module.exports = (
 
 			function onImage(node) {
 				if (node.tagName === 'img') {
-					node.properties.src =
-						options.replace + node.properties.src
+					console.log(
+						'replace  :',
+						JSON.stringify(node.properties.src)
+					)
+
+					node.properties.src = node.properties.src.replace(
+						options.search,
+						options.replace
+					)
+
+					console.log(
+						'replaced :',
+						JSON.stringify(node.properties.src)
+					)
 				}
 			}
 		}
