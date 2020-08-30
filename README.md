@@ -14,7 +14,7 @@ const unified = require('unified')
 const markdown = require('remark-parse')
 const remarkChangeImagesPath = require('remark-change-image-paths')(
 	{
-		search: '^',
+		search: /^/,
 		replace: "/path/to/imagesFolder/",
 	}
 )
