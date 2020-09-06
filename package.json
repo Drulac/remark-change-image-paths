@@ -1,6 +1,6 @@
 {
   "name": "remark-change-image-paths",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "change image paths in your markdown files",
   "main": "index.js",
   "scripts": {
